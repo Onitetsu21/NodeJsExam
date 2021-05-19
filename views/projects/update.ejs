@@ -1,0 +1,19 @@
+<section>
+    <h1>Modifier un projet</h1>
+
+    <form action="/projects/update" method="POST">
+    <input type="hidden" name="_id" value="<%= project._id %>"/>
+        <div class="form-data">
+            <label for="name">Nom du projet</label>
+            <input type="text" id="name" name="name" value="<%= project.name %>">
+        </div>
+        <div class="form-data">
+            <label for="description">Description</label>
+            <textarea type="text" rows="3" id="description" name="description"><%= project.description %></textarea>
+        </div>
+        <div class="form-btn">
+            <a href="/projects"> Back </a>
+            <button type="submit">Modifier</button>
+        </div>
+    </form>
+</section>
