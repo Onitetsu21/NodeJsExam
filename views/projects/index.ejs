@@ -2,7 +2,7 @@
   <h1>Accueil des projets</h1>
 
 <div class="projects">
-  <button class="create-btn"><a class="create-link" href="/projects/create">⨠ Créer un projet</a></button>
+  <a class="create-link" href="/projects/create"><img class="create-project_button" src="add_circle_white_48dp.svg" alt="addProject"></a>
   
     <% projects.forEach(project => { %>
       <div class="project-card">
@@ -29,6 +29,8 @@
       <div class="create-btn_section">
         <button class="create-btn"><a class="create-link" href="/userstories/create/<%=project._id%>">⨠ Créer une user story</a></button>
         <button class="create-btn"><a class="create-link" href="/userstories/<%=project._id%>">⨠ Voir les user stories</a></button>
+        <button class="create-btn"><a class="create-link" href="/bugs/create/<%=project._id%>">⨠ Rajouter un bug</a></button>
+        <button class="create-btn"><a class="create-link" href="/bugs/<%=project._id%>">⨠ Voir les bugs</a></button>
       </div>
     </div>
   </div>

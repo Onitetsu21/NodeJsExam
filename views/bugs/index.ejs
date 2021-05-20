@@ -1,0 +1,38 @@
+<section>
+  
+
+<div class="projects">
+  <!-- <button class="create-btn"><a class="create-link" href="/bugs/create">⨠ Créer une user story</a></button> -->
+
+    <h1>Les bugs</h1>
+    <% bugs.forEach(bug => { %>
+
+      <div class="project">
+       
+        <div class="item-list">
+          <h5>Titre</h5>
+          <p> <%= bug.title %> </p>
+        </div>
+        <div class="item-list">
+          <h5>Repro Steps</h5>
+          <p> <%= bug.reproSteps %> </p>
+        </div>
+        <div class="item-list">
+          <h5>Priorité</h5>
+          <p> <%= bug.priority %> </p>
+        </div>
+        <div class="item-list">
+          <div class="project-btn">
+            <a href="/bugs/update/<%=bug._id%>">Modifier</a>
+            <a href="/bugs/delete/<%=bug._id%>">Supprimer</a>
+          </div>
+        </div>
+
+      </div>
+  
+    <% }); %>
+
+  
+
+</div>
+</section>

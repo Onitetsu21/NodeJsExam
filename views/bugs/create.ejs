@@ -1,18 +1,14 @@
 <section>
-    <h1>Créer une user story</h1>
-    <form action="/userstories/create" method="POST">
+    <h1>Créer un bug</h1>
+    <form action="/bugs/create" method="POST">
         
         <div class="form-data">
             <label for="title">Titre</label>
             <input type="text" id="title" name="title">
         </div>
         <div class="form-data">
-            <label for="description">Description</label>
-            <textarea type="text" rows="1" id="description" name="description"></textarea>
-        </div>
-        <div class="form-data">
-            <label for="acceptanceCriteria">Critère d'acceptation</label>
-            <textarea type="text" rows="1" id="acceptanceCriteria" name="acceptanceCriteria"></textarea>
+            <label for="reproSteps">Repro steps</label>
+            <textarea type="text" rows="1" id="reproSteps" name="reproSteps"></textarea>
         </div>
         <div class="form-data">
             <label for="priority">Priorité</label>

@@ -1,0 +1,10 @@
+<section>
+    <p>Etes-vous sur de supprimer ce bug ?</p>
+    <form action="/bugs/delete" method="POST">
+        <input type="hidden" name="_id" value="<%= _id %>" />
+        <div class="form-btn">
+            <a href="/project">Mince non !</a>
+            <button type="submit">OH OUI</button>
+        </div>
+    </form>
+</section>

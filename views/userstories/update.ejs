@@ -17,7 +17,13 @@
         </div>
         <div class="form-data">
             <label for="priority">Priorité</label>
-            <input type="text"  id="priority" name="priority" value="<%= userStory.priority %>">
+            <select name="priority" id="priority" >
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
         </div>
         <input type="hidden" name="projectId" value="<%= userStory.projectId %>"/>
         <div class="form-btn">
