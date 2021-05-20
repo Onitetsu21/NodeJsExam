@@ -35,10 +35,10 @@ const updateGet = (request, response) => {
 const updatePost = (request, response) => {
     const bug = request.body;
     Bug.findByIdAndUpdate(bug._id, {
-        title: String,
-        reproSteps: String,
-        priority: Number,
-        projectId: ObjectId
+        title: bug.title,
+        reproSteps: bug.reproSteps,
+        priority: bug.priority,
+        projectId: bug.projectId
     })
         .then(() => response.redirect("/projects"))
         .catch((error) => console.log(error));

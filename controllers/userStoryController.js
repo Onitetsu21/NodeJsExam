@@ -39,7 +39,7 @@ const updatePost = (request, response) => {
         description: userStory.description,
         acceptanceCriteria: userStory.acceptanceCriteria,
         priority: userStory.priority,
-        projectId: userStory.projectId,
+        projectId: userStory.projectId
     })
         .then(() => response.redirect("/projects"))
         .catch((error) => console.log(error));
