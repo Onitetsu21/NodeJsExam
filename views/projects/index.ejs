@@ -12,7 +12,7 @@
       <h5>Description</h5>
       <p> <%= project.description %> </p>
 
-      <button class="create-btn"><a class="create-link" href="/userstories/create/:id">⨠ Créer une user story</a></button>
+      <button class="create-btn"><a class="create-link" href="/userstories/create/<%=project._id%>">⨠ Créer une user story</a></button>
 
       <div class="project-btn">
         <a href="/projects/update/<%=project._id%>"><button>Modifier</button></a>

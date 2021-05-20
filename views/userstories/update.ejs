@@ -2,7 +2,8 @@
     <h1>Modifier un projet</h1>
 
     <form action="/projects/update" method="POST">
-        <input type="hidden" name="_id" value="<%= project._id %>"/>
+        <input type="hidden" name="_id" value="<%= userStory._id %>"/>
+        <input type="hidden" name="projectId" value="<%= userStory.projectId %>"/>
         <div class="form-data">
             <label for="title">title</label>
             <input type="text" id="title" name="title">

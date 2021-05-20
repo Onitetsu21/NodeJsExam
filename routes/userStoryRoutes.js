@@ -12,7 +12,7 @@ router.get("/", userStoryController.all);
 ////////////CREATE//////////////
 
 router.get("/create/:id", userStoryController.createGet)
-router.post("/create/:id", userStoryController.createPost)
+router.post("/create", userStoryController.createPost)
 
 
 ////////////UPDATE//////////////

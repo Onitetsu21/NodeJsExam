@@ -10,14 +10,12 @@ const all = (request, response) => {
 ////////////CREATE//////////////
 
 const createGet = (request, response) => {
-    response.render("userstories/create");
+    response.render("userstories/create", {projectId : request.params.id});
 }
 
 const createPost = (request, response) => {
-  const projectId = request.params.id
-  const values = request.body
-  values.projectId = projectId
-  UserStory.create(values)
+  console.log(request.body)
+  UserStory.create(request.body)
     .then(() => response.redirect("/userstories"))
     .then(error => console.log(error));
 }

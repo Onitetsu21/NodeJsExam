@@ -1,24 +1,26 @@
 <section>
     <h1>Créer une user story</h1>
-    <form action="/userStories/create" method="POST">
-            <div class="form-data">
-                <label for="title">title</label>
-                <input type="text" id="title" name="title">
-            </div>
-            <div class="form-data">
-                <label for="description">Description</label>
-                <textarea type="text" rows="3" id="description" name="description"></textarea>
-            </div>
-            <div class="form-data">
-                <label for="acceptanceCriteria">acceptanceCriteria</label>
-                <textarea type="text" rows="3" id="acceptanceCriteria" name="acceptanceCriteria"></textarea>
-            </div>
-            <div class="form-data">
-                <label for="priority">priority</label>
-                <input type="text"  id="priority" name="priority">
-            </div>
+    <form action="/userstories/create" method="POST">
+        
+        <div class="form-data">
+            <label for="title">title</label>
+            <input type="text" id="title" name="title">
+        </div>
+        <div class="form-data">
+            <label for="description">Description</label>
+            <textarea type="text" rows="3" id="description" name="description"></textarea>
+        </div>
+        <div class="form-data">
+            <label for="acceptanceCriteria">acceptanceCriteria</label>
+            <textarea type="text" rows="3" id="acceptanceCriteria" name="acceptanceCriteria"></textarea>
+        </div>
+        <div class="form-data">
+            <label for="priority">priority</label>
+            <input type="text"  id="priority" name="priority">
+        </div>
+        <input type="hidden" name="projectId" value="<%= projectId %>"/>
         <div class="form-btn">
-            <a href="/userStories"> Retour </a>
+            <a href="/userstories"> Retour </a>
             <button type="submit">Créer</button>
         </div>
     </form>
