@@ -1,27 +1,27 @@
 <section>
-    <h1>Modifier un projet</h1>
+    <h1>Modifier la user story</h1>
 
-    <form action="/projects/update" method="POST">
+    <form action="/userstories/update" method="POST">
         <input type="hidden" name="_id" value="<%= userStory._id %>"/>
-        <input type="hidden" name="projectId" value="<%= userStory.projectId %>"/>
         <div class="form-data">
-            <label for="title">title</label>
-            <input type="text" id="title" name="title">
+            <label for="title">Titre</label>
+            <input type="text" id="title" name="title" value="<%= userStory.title %>">
         </div>
         <div class="form-data">
             <label for="description">Description</label>
-            <textarea type="text" rows="3" id="description" name="description"></textarea>
+            <textarea type="text" rows="1" id="description" name="description"><%= userStory.description %></textarea>
         </div>
         <div class="form-data">
-            <label for="acceptanceCriteria">acceptanceCriteria</label>
-            <textarea type="text" rows="3" id="acceptanceCriteria" name="acceptanceCriteria"></textarea>
+            <label for="acceptanceCriteria">Critière d'acceptation</label>
+            <textarea type="text" rows="1" id="acceptanceCriteria" name="acceptanceCriteria"><%= userStory.acceptanceCriteria %></textarea>
         </div>
         <div class="form-data">
-            <label for="priority">priority</label>
-            <input type="text"  id="priority" name="priority">
+            <label for="priority">Priorité</label>
+            <input type="text"  id="priority" name="priority" value="<%= userStory.priority %>">
         </div>
+        <input type="hidden" name="projectId" value="<%= userStory.projectId %>"/>
         <div class="form-btn">
-            <a href="/userstories">Retour</a>
+            <a href="/projects">Retour</a>
             <button type="submit">Modifier</button>
         </div>
     </form>

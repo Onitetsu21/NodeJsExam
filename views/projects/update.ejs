@@ -2,14 +2,21 @@
     <h1>Modifier un projet</h1>
 
     <form action="/projects/update" method="POST">
-    <input type="hidden" name="_id" value="<%= project._id %>"/>
+        <input type="hidden" name="_id" value="<%= project._id %>" />
         <div class="form-data">
             <label for="name">Nom du projet</label>
-            <input type="text" id="name" name="name" value="<%= project.name %>">
+            <input
+                type="text"
+                id="name"
+                name="name"
+                value="<%= project.name %>"
+            />
         </div>
         <div class="form-data">
             <label for="description">Description</label>
-            <textarea type="text" rows="3" id="description" name="description"><%= project.description %></textarea>
+            <textarea type="text" rows="1" id="description" name="description">
+                <%= project.description %>
+            </textarea>
         </div>
         <div class="form-btn">
             <a href="/projects">Retour</a>

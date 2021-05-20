@@ -8,13 +8,18 @@ const app = express();
 
 const dbUri = "mongodb+srv://alix:KH8V3yYSsjqCfjg@clusteralix.pff0a.mongodb.net/test"
 
-mongoose.connect(dbUri, {useUnifiedTopology: true, useNewUrlParser: true})
+mongoose.connect(dbUri, {useUnifiedTopology: true, useNewUrlParser: true,  useFindAndModify: false })
     .then(()=>{
         console.log("(〃￣︶￣)人(￣︶￣〃)  Connected to database !")
         app.listen(3005, ()=> console.log("(☞ﾟヮﾟ)☞  Connected to port 3005 !"))})
     .catch(err=>console.log(err));
 
 app.use(express.static("public"));
+
+var favicon = require('serve-favicon');
+
+app.use(favicon(__dirname + '/public/favicon/favicon.ico'));
+
 app.use(expressLayouts);
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({extended: true}));

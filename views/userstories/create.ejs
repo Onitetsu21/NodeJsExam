@@ -3,24 +3,24 @@
     <form action="/userstories/create" method="POST">
         
         <div class="form-data">
-            <label for="title">title</label>
+            <label for="title">Titre</label>
             <input type="text" id="title" name="title">
         </div>
         <div class="form-data">
             <label for="description">Description</label>
-            <textarea type="text" rows="3" id="description" name="description"></textarea>
+            <textarea type="text" rows="1" id="description" name="description"></textarea>
         </div>
         <div class="form-data">
-            <label for="acceptanceCriteria">acceptanceCriteria</label>
-            <textarea type="text" rows="3" id="acceptanceCriteria" name="acceptanceCriteria"></textarea>
+            <label for="acceptanceCriteria">Critère d'acceptation</label>
+            <textarea type="text" rows="1" id="acceptanceCriteria" name="acceptanceCriteria"></textarea>
         </div>
         <div class="form-data">
-            <label for="priority">priority</label>
-            <input type="text"  id="priority" name="priority">
+            <label for="priority">Priorité</label>
+            <input type="text"  id="priority" pattern="-?[0-5]*(\.[0-5]+)?" name="priority">
         </div>
         <input type="hidden" name="projectId" value="<%= projectId %>"/>
         <div class="form-btn">
-            <a href="/projects"> Retour </a>
+            <a href="/projects">Retour</a>
             <button type="submit">Créer</button>
         </div>
     </form>

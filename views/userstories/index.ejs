@@ -1,29 +1,42 @@
 <section>
-  <h1>Accueil des projets</h1>
+  
 
 <div class="projects">
   <!-- <button class="create-btn"><a class="create-link" href="/userstories/create">⨠ Créer une user story</a></button> -->
-  <% userstories.forEach(userStory => { %>
 
-    <div class="project">
-     
-      <h5>Titre</h5>
-      <p> <%= userStory.title %> </p>
-      <h5>Description</h5>
-      <p> <%= userStory.description %> </p>
-      <h5>Critère d'acceptation</h5>
-      <p> <%= userStory.acceptanceCriteria %> </p>
-      <h5>Priorité</h5>
-      <p> <%= userStory.priority %> </p>
+    <h1>Les users stories</h1>
+    <% userstories.forEach(userStory => { %>
 
-      <div class="project-btn">
-        <a href="/userstories/update/<%=userStory._id%>"><button>Modifier</button></a>
-        <a href="/userstories/delete/<%=userStory._id%>"><button>Supprimer</button></a>
+      <div class="project">
+       
+        <div class="item-list">
+          <h5>Titre</h5>
+          <p> <%= userStory.title %> </p>
+        </div>
+        <div class="item-list">
+          <h5>Description</h5>
+          <p> <%= userStory.description %> </p></div>
+        <div class="item-list">
+          <h5>Critère d'acceptation</h5>
+          <p> <%= userStory.acceptanceCriteria %> </p>
+        </div>
+        <div class="item-list">
+          <h5>Priorité</h5>
+          <p> <%= userStory.priority %> </p>
+        </div>
+
+        <div class="item-list">
+          <div class="project-btn">
+            <a href="/userstories/update/<%=userStory._id%>">Modifier</a>
+            <a href="/userstories/delete/<%=userStory._id%>">Supprimer</a>
+          </div>
+        </div>
+
       </div>
+  
+    <% }); %>
 
-    </div>
-
-  <% }); %>
+  
 
 </div>
 </section>

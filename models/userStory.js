@@ -9,7 +9,7 @@ const userStorySchema = new Schema({
   acceptanceCriteria : String,
   priority: Number,
   projectId: ObjectId
-});
+})
 
 const UserStory = mongoose.model("UserStory", userStorySchema)
 
