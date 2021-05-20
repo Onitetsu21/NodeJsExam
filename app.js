@@ -23,7 +23,6 @@ app.use("/projects", projectRoutes)
 
 app.use("/userstories", userStoryRoutes)
 
-
 app.get("/", (request, response) => {
   response.redirect("projects");
 });

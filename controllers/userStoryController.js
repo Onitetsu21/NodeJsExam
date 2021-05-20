@@ -1,22 +1,22 @@
 const UserStory = require("../models/userStory")
 
 const all = (request, response) => {
-    UserStory.find()
+    UserStory.find({projectId : request.params.id})
         .then((userstories) => response.render("userstories", { userstories: userstories }))
         .catch((error) => console.log(error));
-};
+}
 
 
 ////////////CREATE//////////////
 
 const createGet = (request, response) => {
-    response.render("userstories/create", {projectId : request.params.id});
+    response.render("userstories/create", {projectId : request.params.id})
 }
 
 const createPost = (request, response) => {
   console.log(request.body)
   UserStory.create(request.body)
-    .then(() => response.redirect("/userstories"))
+    .then(() => response.redirect("/projects"))
     .then(error => console.log(error));
 }
 

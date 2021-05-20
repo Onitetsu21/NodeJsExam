@@ -6,7 +6,7 @@ const userStoryController = require("../controllers/userStoryController")
 
 ////////////ALL//////////////
 
-router.get("/", userStoryController.all);
+router.get("/:id", userStoryController.all);
 
 
 ////////////CREATE//////////////
