@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const expressLayouts = require("express-ejs-layouts");
 const projectRoutes = require("./routes/projectRoutes")
+const userStoryRoutes = require("./routes/userStoryRoutes")
 
 const app = express();
 
@@ -18,7 +19,10 @@ app.use(expressLayouts);
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({extended: true}));
 
-app.use(projectRoutes)
+app.use("/projects", projectRoutes)
+
+app.use("/userstories", userStoryRoutes)
+
 
 app.get("/", (request, response) => {
   response.redirect("projects");

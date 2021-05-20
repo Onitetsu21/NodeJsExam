@@ -6,27 +6,24 @@ const projectController = require("../controllers/projectController")
 
 ////////////ALL//////////////
 
-router.get("/projects", projectController.all);
+router.get("/", projectController.all);
 
 
 ////////////CREATE//////////////
 
-router.get("/projects/create", projectController.createGet)
-
-router.post("/projects/create", projectController.createPost)
+router.get("/create", projectController.createGet)
+router.post("/create", projectController.createPost)
 
 
 ////////////UPDATE//////////////
 
-router.get("/projects/update/:id", projectController.updateGet)
-
-router.post("/projects/update", projectController.updatePost)
+router.get("/update/:id", projectController.updateGet)
+router.post("/update", projectController.updatePost)
 
 
 ////////////DELETE//////////////
 
-router.get("/projects/delete/:id", projectController.deleteGet)
-
-router.post("/projects/delete", projectController.deletePost)
+router.get("/delete/:id", projectController.deleteGet)
+router.post("/delete", projectController.deletePost)
 
 module.exports = router

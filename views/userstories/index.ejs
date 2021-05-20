@@ -1,0 +1,29 @@
+<section>
+  <h1>Accueil des projets</h1>
+
+<div class="projects">
+  <button class="create-btn"><a class="create-link" href="/userstories/create">⨠ Créer une user story</a></button>
+  <% userstories.forEach(userStory => { %>
+
+    <div class="project">
+     
+      <h5>Titre</h5>
+      <p> <%= userStory.title %> </p>
+      <h5>Description</h5>
+      <p> <%= userStory.description %> </p>
+      <h5>Critère d'acceptation</h5>
+      <p> <%= userStory.acceptanceCriteria %> </p>
+      <h5>Priorité</h5>
+      <p> <%= userStory.priority %> </p>
+
+      <div class="project-btn">
+        <a href="/userstories/update/<%=userStory._id%>"><button>Modifier</button></a>
+        <a href="/userstories/delete/<%=userStory._id%>"><button>Supprimer</button></a>
+      </div>
+
+    </div>
+
+  <% }); %>
+
+</div>
+</section>

@@ -149,3 +149,15 @@ input, textarea{
 .project-btn > a {
     padding: 10px;
 }
+
+.create-btn{
+    color: black;
+    font-size: 20px;
+}
+
+.create-link{
+    color: black !important;
+    text-decoration: none;
+    padding: 10px;
+}
+

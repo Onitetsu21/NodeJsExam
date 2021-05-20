@@ -1,0 +1,27 @@
+<section>
+    <h1>Modifier un projet</h1>
+
+    <form action="/projects/update" method="POST">
+        <input type="hidden" name="_id" value="<%= project._id %>"/>
+        <div class="form-data">
+            <label for="title">title</label>
+            <input type="text" id="title" name="title">
+        </div>
+        <div class="form-data">
+            <label for="description">Description</label>
+            <textarea type="text" rows="3" id="description" name="description"></textarea>
+        </div>
+        <div class="form-data">
+            <label for="acceptanceCriteria">acceptanceCriteria</label>
+            <textarea type="text" rows="3" id="acceptanceCriteria" name="acceptanceCriteria"></textarea>
+        </div>
+        <div class="form-data">
+            <label for="priority">priority</label>
+            <input type="text"  id="priority" name="priority">
+        </div>
+        <div class="form-btn">
+            <a href="/userstories">Retour</a>
+            <button type="submit">Modifier</button>
+        </div>
+    </form>
+</section>
